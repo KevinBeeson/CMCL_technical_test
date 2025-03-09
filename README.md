@@ -3,13 +3,18 @@
 ## Overview
 This project fetches and analyzes flood monitoring data from the UK Environment Agency's API. Users can select a station, filter data for the last 24 hours, and visualize the measurements.
 
+## API source
+API Source
+This project uses the UK Government's Flood Monitoring API:
+
+- Base API URL: https://environment.data.gov.uk/flood-monitoring/id/stations
 
 ## Requirements
 
 - Python 3.x
 - pandas
 - matplotlib
-- Qt5Agg
+- PyQt5
 - requests
 
 ## Installation
@@ -37,15 +42,21 @@ This project fetches and analyzes flood monitoring data from the UK Environment 
 
 4. Install the required packages:
     ```bash
-    pip install pandas tqdm matplotlib Qt5Agg requests
+    pip install pandas tqdm matplotlib PyQt5 requests
     ```
 ## Features
 - Fetches live flood monitoring station data
 - Allows user selection of a station based on parameters like town or river name
-- Supports filtering and visualization of specific measurement types
+- Supports filtering and visualisation of specific measurement types
 - Plots the last 24 hours of data using Matplotlib
 
 ## Example run
+
+To run the program use the following command:
+```bash
+ python water_level.py 
+```
+The program will then fetch all the names of the stations and the user can start narrowing down the data base to their wanted water station or just select a water station.
 ```
 INFO:root:Getting all the stations
 INFO:root:Successfully got stations

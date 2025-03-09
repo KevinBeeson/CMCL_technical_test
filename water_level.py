@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import logging
 import matplotlib 
-from IPython.display import display
 import copy
 matplotlib.use('Qt5Agg')
 logging.getLogger().setLevel(logging.INFO)

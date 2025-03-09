@@ -1,4 +1,4 @@
 pandas
 matplotlib
-Qt5Agg
+PyQt5
 requests
