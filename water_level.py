@@ -34,7 +34,7 @@ if __name__ == '__main__':
     data_original=copy.deepcopy(data)
     while len(data)>1:
         logging.info("Displaying the first 20 stations")
-        logging.info(data[parameters][0:20].to_string())
+        logging.info("\n"+data[parameters][0:20].to_string())
         logging.info("There are "+str(len(data))+" stations")
         logging.info("Which station would you like to select? Enter parameter=parameter_value (e.g. town=Reading). If you would like to restart the selection, enter 'restart'")
         logging.info("The avaliable parameters are:"+str(parameters))
