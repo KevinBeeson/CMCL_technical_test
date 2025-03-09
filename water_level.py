@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import logging
 import matplotlib 
-import sys
 from IPython.display import display
 import copy
 matplotlib.use('Qt5Agg')
