@@ -34,7 +34,7 @@ if __name__ == '__main__':
     data_original=copy.deepcopy(data)
     while len(data)>1:
         logging.info("Displaying the first 20 stations")
-        logging.info("\n"+data[parameters][0:20].to_string())
+        logging.info("\n"+data[parameters][0:20].to_markdown())
         logging.info("There are "+str(len(data))+" stations")
         logging.info("Which station would you like to select? Enter parameter=parameter_value (e.g. town=Reading). If you would like to restart the selection, enter 'restart'")
         logging.info("The avaliable parameters are:"+str(parameters))
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     # Alternatively, you can use mask:
     data_station_filtered = data_station_filtered.mask(data_station_filtered['dateTime'] < (current_time - pd.Timedelta(hours=24)))
     
-    logging.info(data_station_filtered[['dateTime','value','measure']].to_string())
+    logging.info(data_station_filtered[['dateTime','value','measure']].to_markdown())
     #plot the data using matplotlib
 
     ax, fig = plt.subplots()

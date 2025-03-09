@@ -16,6 +16,7 @@ This project uses the UK Government's Flood Monitoring API:
 - matplotlib
 - PyQt5
 - requests
+- tabulate
 
 ## Installation
 
@@ -42,7 +43,7 @@ This project uses the UK Government's Flood Monitoring API:
 
 4. Install the required packages:
     ```bash
-    pip install pandas tqdm matplotlib PyQt5 requests
+    pip install pandas tqdm matplotlib PyQt5 requests tabulate
     ```
 ## Features
 - Fetches live flood monitoring station data
@@ -106,7 +107,7 @@ INFO:root:Which station would you like to select? Enter parameter=parameter_valu
 INFO:root:The avaliable parameters are:['id_name', 'town', 'catchmentName', 'riverName', 'label']
 ```
 
-This process repeats until only a single station is available or the user selects restart. If the user select restart all orginial stations will be avaiable for them to choose from again.
+This process repeats until only a single station is available or the user selects restart. If the user select restart all original stations will be available for them to choose from again.
 
 ```
 INFO:root:Getting the data for the station with id: 2200TH
@@ -118,7 +119,7 @@ INFO:root:(1, 'http://environment.data.gov.uk/flood-monitoring/id/measures/2200T
 INFO:root:Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate by a comma (e.g. 0,1)
 ```
 
-You can select which numbers to plot. Multiple measurements can be plotted on one measurement.
+You can select which numbers to plot. Multiple measurements can be plotted on one measurement. If there are only one station available the program automatically plots that station
 Input:
 
 ```
