@@ -216,4 +216,4 @@ INFO:root:                     dateTime   value                                 
 188 2025-03-08 16:30:00+00:00  56.333  http://environment.data.gov.uk/flood-monitoring/id/measures/2200TH-flow--Mean-15_min-m3_s
 
 ```
-![Alt text](Example figure.png)
+![Alt text](images/Example_figure.png)
