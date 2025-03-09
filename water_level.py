@@ -41,8 +41,10 @@ if __name__ == '__main__':
         selected_station=input()
         if any(x in selected_station for x in parameters) and '=' in selected_station:
             parameter,parameter_value=selected_station.split('=')
-            #put the parameter value in title case
-            mask=data[parameter]==parameter_value.title().strip()
+            parameter_value=parameter_value.lower()
+
+            #Create a mask for the selected parameter
+            mask=[x.lower()==parameter_value if type(x)==str else x==parameter_value for x in data[parameter]]
             if sum(mask)==0:
                 logging.info("No station with the specified parameter")
             else:
@@ -81,12 +83,19 @@ if __name__ == '__main__':
         for i in range(len(types)):
             logging.info((i,types[i]))
         logging.info("Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate by a comma (e.g. 0,1)")
-        selected_types=input()
-        selected_types=selected_types.split(',')
-        for i in range(len(selected_types)):
-            selected_types[i]=types[int(selected_types[i])]
-        logging.info("Selected types of measurements are: ") 
-        logging.info(selected_types)
+        selection=True
+        while selection:
+            selected_types=input()
+            selected_types=selected_types.split(',')
+            try:
+                for i in range(len(selected_types)):
+                    selected_types[i]=types[int(selected_types[i])]
+                logging.info("Selected types of measurements are: ") 
+                logging.info(selected_types)
+                selection=False
+            except:
+                logging.info("Invalid input")
+                logging.info("Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate by a comma (e.g. 0,1)")
     else:
         logging.info("The type of measurement is: "+types[0])
         selected_types=[types[0]]
