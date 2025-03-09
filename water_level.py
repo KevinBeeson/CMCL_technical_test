@@ -80,7 +80,7 @@ if __name__ == '__main__':
         #print types with an index
         logging.info("Index Type")
         for i in range(len(types)):
-            logging.info(i,types[i])
+            logging.info((i,types[i]))
         logging.info("Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate by a comma (e.g. 0,1)")
         selected_types=input()
         selected_types=selected_types.split(',')
