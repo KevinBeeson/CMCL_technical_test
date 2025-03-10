@@ -1,7 +1,7 @@
 # UK Flood Monitoring Data Analysis
 
 ## Overview
-This project fetches and analyzes flood monitoring data from the UK Environment Agency's API. Users can select a station, filter data for the last 24 hours, and visualize the measurements.
+This project fetches and analyses flood monitoring data from the UK Environment Agency's API. Users can select a station, filter data for the last 24 hours, and visualise the measurements.
 
 ## API source
 API Source
@@ -47,7 +47,7 @@ This project uses the UK Government's Flood Monitoring API:
     pip install pandas tqdm matplotlib PyQt5 requests tabulate
     ```
     
-    or:
+    Or:
     
     ```bash
     pip install -r requirements.txt
@@ -60,11 +60,11 @@ This project uses the UK Government's Flood Monitoring API:
 
 ## Example run
 
-To run the program use the following command:
+To run the program, use the following command:
 ```bash
  python water_level.py 
 ```
-The program will then fetch all the names of the stations and the user can start narrowing down the data base to their wanted water station or just select a water station.
+The program will then fetch all the names of the stations, and the user can start narrowing down the database to their wanted water station or just select a water station.
 ```
 INFO:root:Getting all the stations
 INFO:root:Successfully got stations
@@ -94,17 +94,17 @@ INFO:root:
 | 19 | 2406TH    | Chineham           | Loddon                                             | Petty's Brook    | Chineham                |
 INFO:root:There are 5391 stations
 INFO:root:Which station would you like to select? Enter parameter=parameter_value (e.g. town=Reading). If you would like to restart the selection, enter 'restart'
-INFO:root:The avaliable parameters are:['id_name', 'town', 'catchmentName', 'riverName', 'label']
+INFO:root:The available parameters are:['id_name', 'town', 'catchmentName', 'riverName', 'label']
 ```
 
-The user can now narrow down these stations using the parameters ['id_name', 'town', 'catchmentName', 'riverName', 'label'], the program will narrow down this selection. Note the input wont be case sensitive.
+The user can now narrow down these stations using the parameters ['id_name', 'town', 'catchmentName', 'riverName', 'label']; the program will narrow down this selection. Note the input won't be case sensitive.
 
 e.g.
 user input:
 ```
 town=reading
 ```
-output:
+Output:
 ```
 INFO:root:Displaying the first 20 stations
 INFO:root:
@@ -115,10 +115,10 @@ INFO:root:
 |  2 | 2298TH    | Reading | Vale of White Horse    | River Kennet | Blakes Lock    |
 INFO:root:There are 3 stations
 INFO:root:Which station would you like to select? Enter parameter=parameter_value (e.g. town=Reading). If you would like to restart the selection, enter 'restart'
-INFO:root:The avaliable parameters are:['id_name', 'town', 'catchmentName', 'riverName', 'label']
+INFO:root:The available parameters are:['id_name', 'town', 'catchmentName', 'riverName', 'label']
 ```
 
-This process repeats until only a single station is available or the user selects restart. If the user select restart all original stations will be available for them to choose from again.
+This process repeats until only a single station is available or the user selects restart. If the user selects restart, all original stations will be available for them to choose from again.
 
 ```
 INFO:root:Getting the data for the station with id: 2200TH
@@ -127,10 +127,10 @@ INFO:root:The types of measurements are:
 INFO:root:Index Type
 INFO:root:(0, 'http://environment.data.gov.uk/flood-monitoring/id/measures/2200TH-flow--Mean-15_min-m3_s')
 INFO:root:(1, 'http://environment.data.gov.uk/flood-monitoring/id/measures/2200TH-level-stage-i-15_min-mASD')
-INFO:root:Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate by a comma (e.g. 0,1)
+INFO:root:Which type(s) of measurement would you like to plot? Select the relevant index number if multiple types are separated by a comma (e.g. 0,1)
 ```
 
-You can select which numbers to plot. Multiple measurements can be plotted on one measurement. If there are only one station available the program automatically plots that station
+You can select which numbers to plot. Multiple measurements can be plotted on one measurement. If there is only one station available, the program automatically plots that station.
 Input:
 
 ```

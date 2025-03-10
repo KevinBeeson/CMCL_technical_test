@@ -37,7 +37,7 @@ if __name__ == '__main__':
         logging.info("\n"+data[parameters][0:20].to_markdown())
         logging.info("There are "+str(len(data))+" stations")
         logging.info("Which station would you like to select? Enter parameter=parameter_value (e.g. town=Reading). If you would like to restart the selection, enter 'restart'")
-        logging.info("The avaliable parameters are:"+str(parameters))
+        logging.info("The available parameters are:"+str(parameters))
         selected_station=input()
         if any(x in selected_station for x in parameters) and '=' in selected_station:
             parameter,parameter_value=selected_station.split('=')
@@ -82,7 +82,7 @@ if __name__ == '__main__':
         logging.info("Index Type")
         for i in range(len(types)):
             logging.info((i,types[i]))
-        logging.info("Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate by a comma (e.g. 0,1)")
+        logging.info("Which type(s) of measurement would you like to plot? select the relevant index number, if multiples types separate are by a comma (e.g. 0,1)")
         selection=True
         while selection:
             selected_types=input()
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     # Alternatively, you can use mask:
     data_station_filtered = data_station_filtered.mask(data_station_filtered['dateTime'] < (current_time - pd.Timedelta(hours=24)))
     
-    logging.info(data_station_filtered[['dateTime','value','measure']].to_markdown())
+    logging.info("\n"+data_station_filtered[['dateTime','value','measure']].to_markdown())
     #plot the data using matplotlib
 
     ax, fig = plt.subplots()
