@@ -9,6 +9,15 @@ This project uses the UK Government's Flood Monitoring API:
 
 - Base API URL: https://environment.data.gov.uk/flood-monitoring/id/stations
 
+## Docker 
+
+If you would like to run it through docker you can 
+
+```bash
+docker run -p 8501:8501 --rm kevinbeeson/cmcl_technical_test:latest
+```
+
+
 ## Requirements
 
 - Python 3.x
