@@ -8,7 +8,6 @@ import copy
 import streamlit as st
 import numpy as np
 
-matplotlib.use('Qt5Agg')
 logging.getLogger().setLevel(logging.INFO)
 
 pd.set_option('display.max_columns', None)
