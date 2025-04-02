@@ -14,9 +14,7 @@ This project uses the UK Government's Flood Monitoring API:
 - Python 3.x
 - pandas
 - matplotlib
-- PyQt5
 - requests
-- tabulate
 - streamlit
 
 ## Installation
@@ -45,7 +43,7 @@ This project uses the UK Government's Flood Monitoring API:
 4. Install the required packages:
 
     ```bash
-    pip install pandas tqdm matplotlib PyQt5 requests tabulate streamlit
+    pip install pandas tqdm matplotlib requests streamlit
     ```
     
     Or:
@@ -75,4 +73,4 @@ The user can now narrow down these stations using the parameters ['id_name', 'to
 This process repeats until only a single station is available or the user selects restart. If the user selects restart, all original stations will be available for them to choose from again.
 
 
-You can select which numbers to plot. Multiple measurements can be plotted on one measurement. If there is only one station available, the program automatically plots that station.
+You can select which numbers to plot. Multiple measurements can be plotted on one measurement.

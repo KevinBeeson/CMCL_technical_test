@@ -1,6 +1,4 @@
 pandas
 matplotlib
-PyQt5
 requests
-tabulate
 streamlit
