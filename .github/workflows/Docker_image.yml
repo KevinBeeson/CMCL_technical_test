@@ -20,5 +20,5 @@ jobs:
       run: docker build . -t kevinbeeson/flood_monitoring_api:latest
     - name: push image to docker hub
       run: |
-          docker login -u kevinbeeson -p ${{ secrets.PASSWORD }}
+          docker login -u kevinbeeson -p ${{ secrets.DOCKERHUB_PASSWORD }}
           docker push kevinbeeson/flood_monitoring_api:latest
