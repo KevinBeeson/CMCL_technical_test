@@ -14,7 +14,7 @@ This project uses the UK Government's Flood Monitoring API:
 If you would like to run it through docker you can 
 
 ```bash
-docker run -p 8501:8501 --rm kevinbeeson/cmcl_technical_test:latest
+docker run -p 8501:8501 --rm kevinbeeson/flood_monitoring_api:latest
 ```
 
 
@@ -30,23 +30,23 @@ docker run -p 8501:8501 --rm kevinbeeson/cmcl_technical_test:latest
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/KevinBeeson/CMCL_technical_test
-    cd CMCL_technical_test
+    git clone https://github.com/KevinBeeson/Flood_monitoring_API
+    cd Flood_monitoring_API
     ```
 
 2. Create a virtual environment (recommended):
     ```bash
-    python -m venv CMCL
+    python -m venv Flood_monitoring
     ```
 
 3. Activate the virtual environment:
     - On Linux:
         ```bash
-        source CMCL/bin/activate
+        source Flood_monitoring/bin/activate
         ```
     - On Windows:
         ```bash
-        ./CMCL/scripts/activate
+        ./Flood_monitoring/scripts/activate
         ```
 
 4. Install the required packages:
