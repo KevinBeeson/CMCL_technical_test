@@ -9,7 +9,18 @@ This project uses the UK Government's Flood Monitoring API:
 
 - Base API URL: https://environment.data.gov.uk/flood-monitoring/id/stations
 
-## Docker 
+## Using Docker
+
+You can run the Hurricane Loss Simulation using a pre-built Docker image available on [Docker Hub](https://hub.docker.com/r/kevinbeeson/flood_monitoring_api), eliminating the need to build it locally.
+
+### 1. Pull the Docker Image if you would like it saved locally or just run the docker command
+
+```bash
+docker pull kevinbeeson/flood_monitoring_api:latest
+```
+
+
+### 2. Or Just run using Docker 
 
 If you would like to run it through docker you can 
 
